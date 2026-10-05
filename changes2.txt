@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conference Timeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f2f2f2;
+      padding: 50px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+   .timeline-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: nowrap;   /* Keep all cards in one line */
+  gap: 20px;
+  width: max-content;  /* Expand according to content */
+  padding-bottom: 10px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;      /* Prevent cards from shrinking */
+}    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .calendar-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 15px auto;
+      background: #8B0000; /* Dark Red */
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .calendar-icon .day {
+      font-size: 22px;
+    }
+
+    .calendar-icon::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 10px;
+      right: 10px;
+      height: 12px;
+      background: #5a0000; /* Darker Red Top */
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .event-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .event-date {
+      font-size: 14px;
+      color: #8B0000;
+      font-weight: 500;
+    }
+
+    /* Optional scrollbar styling */
+    .timeline-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .timeline-wrapper::-webkit-scrollbar-thumb {
+      background-color: #aaa;
+      border-radius: 4px;
+    }
+
+    .timeline-wrapper::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+.students-box {
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  border: 2px solid #fff;
+  border-radius: 18px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.students-box p {
+  margin: 0;
+}
+  </style>
+</head>
+<body>
